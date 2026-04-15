@@ -51,4 +51,8 @@ public class Pracownik {
     public String getNazwisko() {
         return nazwisko;
     }
+
+    public String getIdPracownika() {
+        return idPracownika;
+    }
 }
