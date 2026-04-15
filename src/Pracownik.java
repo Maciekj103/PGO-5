@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Pracownik {
 
     private String idPracownika;
@@ -13,15 +15,15 @@ public class Pracownik {
     }
 
     public final String pobierzIdPracownika(){
-
+        return idPracownika;
     }
 
     public double obliczKosztMiesieczny(){
-
+        return stawkaBazowa * 0.125;
     }
 
     public String przedstawSie(){
-
+        return "Pracownik: " + imie + " " + nazwisko + " ID: " + idPracownika;
     }
 
     @Override
@@ -34,5 +36,19 @@ public class Pracownik {
                 '}';
     }
 
-    
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Pracownik pracownik = (Pracownik) o;
+        return Objects.equals(idPracownika, pracownik.idPracownika);
+    }
+
+    // Gettery
+    public String getImie() {
+        return imie;
+    }
+
+    public String getNazwisko() {
+        return nazwisko;
+    }
 }
