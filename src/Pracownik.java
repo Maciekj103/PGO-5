@@ -55,4 +55,8 @@ public class Pracownik {
     public String getIdPracownika() {
         return idPracownika;
     }
+
+    public double getStawkaBazowa() {
+        return stawkaBazowa;
+    }
 }

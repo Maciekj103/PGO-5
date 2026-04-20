@@ -14,21 +14,21 @@ public class ZespolProjektowy{
 
     public void wypiszSkladZespolu(){
         for (Pracownik pracownik : pracownicy){
-            pracownik.przedstawSie();
+            System.out.println(pracownik.przedstawSie());
         }
     }
 
     public double policzLacznyKoszt(){
         double suma = 0;
         for (Pracownik pracownik : pracownicy){
-            suma =+ pracownik.obliczKosztMiesieczny();
+            suma += pracownik.obliczKosztMiesieczny();
         }
         return suma;
     }
 
     public Pracownik znajdzPoId(String idPracownika){
         for (Pracownik pracownik : pracownicy){
-            if (pracownik.getIdPracownika() == idPracownika) return pracownik;
+            if (pracownik.pobierzIdPracownika().equals(idPracownika)) return pracownik;
         }
         return null;
     }
@@ -43,6 +43,7 @@ public class ZespolProjektowy{
         int i = 1;
         for (Pracownik programista : programisci){
             System.out.println(i + ") " +  programista.przedstawSie());
+            i++;
         }
 
     }

@@ -19,7 +19,7 @@ public class Programista extends Pracownik{
     }
 
     public void wypiszTechnologie(){
-        System.out.println("Jakieś technologie...");
+        System.out.println("Programista pracuje głównie w języku: " + glownyJezyk);
     }
 
     @Override
